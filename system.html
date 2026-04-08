@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>24% Twenty-Four Percent | Sustainable Design</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container container">
+      <a href="index.html" class="logo" style="display: flex; align-items: center;">
+        <img src="./images/brand/logo.png" alt="24% Logo" style="height: 80px; width: auto;" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Concept</a></li>
+        <li><a href="design.html">Design</a></li>
+        <li><a href="system.html" class="active">System</a></li>
+        <li><a href="impact.html">Impact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero-section container">
+    <div class="hero text-center fade-in-up">
+      <h1 class="text-secondary"
+        style="font-weight: 700; font-size: clamp(4rem, 10vw, 8rem); line-height: 1; letter-spacing: -0.02em;">System
+      </h1>
+      <p style="font-size: 1.25rem; color: #666; font-weight: 300; margin-top: 1.5rem;">
+        我們不僅是在設計單一產品，而是建構一套改變快時尚文化的整合性設計系統。</p>
+    </div>
+  </header>
+
+  <!-- System Content -->
+  <section id="system" class="container" style="padding-top: 5vh; min-height: auto;">
+    <!-- Background / Problem & Carousel -->
+    <div class="grid-2 mb-large" style="align-items: stretch;">
+      <!-- Flip Card Section -->
+      <div class="fade-in-up delay-100 position-relative flip-card"
+        style="min-height: 350px; perspective: 1000px; padding: 0; width: 100%;">
+        <div class="flip-card-inner" id="flip-container"
+          style="position: relative; width: 100%; height: 100%; min-height: 350px; text-align: left; transition: transform 0.6s; transform-style: preserve-3d;">
+          <!-- Front (Background) -->
+          <div class="card flip-card-front"
+            style="padding: 2.5rem; position: absolute; width: 100%; height: 100%; backface-visibility: hidden; display: flex; flex-direction: column; background:#F0F8EC; border-left: 4px solid #5D9C59; margin:0;">
+            <h3 class="text-secondary">Background</h3>
+            <div style="flex:1;">
+              <p style="font-weight:600; margin-bottom:0.5rem; margin-top:1rem;">你知道快時尚是什麼嗎？</p>
+              <p style="font-size:0.95rem; line-height:1.5;">
+                是指可以在短時間內將潮流服飾推出的商業模式。對於消費者來說，可以在短時間，以低廉的價格，買到新潮的服飾。而快時尚使消費者加快衣物汰換的速度，每件平均穿過的次數也逐漸降低，這也是造成環境衝擊的原因。</p>
+            </div>
+            <div style="text-align:right; margin-top:1rem;">
+              <button onclick="document.getElementById('flip-container').style.transform='rotateY(180deg)';"
+                style="background:none; border:none; color:#5D9C59; cursor:pointer; font-size:1.1rem; display:inline-flex; align-items:center; gap:0.5rem; font-weight:600; padding:0; outline:none;"
+                aria-label="翻頁看Problem">
+                翻頁看 Problem <span style="font-size:1.5rem;">&rarr;</span>
+              </button>
+            </div>
+          </div>
+          <!-- Back (Problem) -->
+          <div class="card flip-card-back"
+            style="padding: 2.5rem; position: absolute; width: 100%; height: 100%; backface-visibility: hidden; transform: rotateY(180deg); display: flex; flex-direction: column; background:#F0F8EC; border-left: 4px solid #5D9C59; margin:0;">
+            <h3 class="text-secondary">Problem</h3>
+            <div style="flex:1;">
+              <p
+                style="font-family: 'Helvetica Neue', Helvetica, Arial, '微軟正黑體', 'Microsoft JhengHei', sans-serif; font-weight: 700; font-size:1.1rem; color:#333; margin-top:1rem; margin-bottom:0.5rem;">
+                服飾產業成為全球第二大污染源</p>
+              <p style="font-size:0.95rem; line-height:1.6; margin-bottom:0.8rem; color:#555;">
+                每年服裝產業所丟棄的垃圾高達九千兩百萬公噸以上，等同於131棟台北101建築總重。</p>
+              <p style="font-size:0.95rem; line-height:1.6; color:#555;">
+                快時尚導致過度生產又隨意丟棄衝擊環境，服裝產業的「快時尚」讓消費者用更便宜的價錢就能買到新衣服，具有多種款式選擇，但這其實是嚴重的環境危機，我們過度生產又隨意丟棄，導致服飾產業為全球第二大污染源。
+              </p>
+            </div>
+            <div style="text-align:right; margin-top:1rem;">
+              <button onclick="document.getElementById('flip-container').style.transform='rotateY(0deg)';"
+                style="background:none; border:none; color:#5D9C59; cursor:pointer; font-size:1.1rem; display:inline-flex; align-items:center; gap:0.5rem; font-weight:600; padding:0; outline:none;"
+                aria-label="回到Background">
+                <span style="font-size:1.5rem;">&larr;</span> 回到 Background
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Section -->
+      <div class="fade-in-up delay-200" style="display:flex; flex-direction:column; height: 100%;">
+        <div class="carousel-container"
+          style="display:flex; overflow-x:auto; scroll-snap-type: x mandatory; gap:1rem; border-radius:12px; height: 100%; min-height: 350px; scrollbar-width:none; -ms-overflow-style:none;">
+          <img src="./images/system/background-1.jpg" alt="Background 1"
+            style="scroll-snap-align: center; flex: 0 0 100%; object-fit:cover; border-radius:12px; aspect-ratio:16/9; width:100%; height:100%;" />
+          <img src="./images/system/background-2.jpg" alt="Background 2"
+            style="scroll-snap-align: center; flex: 0 0 100%; object-fit:cover; border-radius:12px; aspect-ratio:16/9; width:100%; height:100%;" />
+          <img src="./images/system/background-3.jpg" alt="Background 3"
+            style="scroll-snap-align: center; flex: 0 0 100%; object-fit:cover; border-radius:12px; aspect-ratio:16/9; width:100%; height:100%;" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Solution Process -->
+    <div class="solution mb-large fade-in-up delay-300">
+      <h3 class="text-center text-primary mb-large">Solution: 24% 系統設計三階段</h3>
+
+      <div class="image-wrapper"
+        style="width:100%; border-radius:20px; overflow:hidden; margin-bottom:3rem; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+        <img src="./images/system/system-flow.jpg" alt="System Flow" style="width:100%; height:auto; display:block;" />
+      </div>
+
+      <div class="grid-3 text-center position-relative">
+        <a href="design.html#visual-design" class="card"
+          style="text-decoration:none; color:inherit; display:flex; flex-direction:column; transition: transform 0.3s;"
+          onmouseover="this.style.transform='translateY(-5px)';" onmouseout="this.style.transform='translateY(0)';">
+          <div class="tag">Stage 1</div>
+          <h4>購買前：知識教育</h4>
+          <p class="mt-large" style="margin-top:1rem; flex:1;">透過品牌周邊教育文宣，傳遞正確的永續觀念，減少衝動購物。</p>
+          <p style="margin-top:1rem; font-size:0.85rem; color:#5D9C59; font-weight:600;">點擊前往 Design &rarr;</p>
+        </a>
+        <a href="design.html#product-design" class="card"
+          style="text-decoration:none; color:inherit; display:flex; flex-direction:column; transition: transform 0.3s;"
+          onmouseover="this.style.transform='translateY(-5px)';" onmouseout="this.style.transform='translateY(0)';">
+          <div class="tag">Stage 2</div>
+          <h4>使用中：APP輔助</h4>
+          <p class="mt-large" style="margin-top:1rem; flex:1;">透過24% APP設計數位衣櫃與穿搭紀錄，極大化衣物使用率。</p>
+          <p style="margin-top:1rem; font-size:0.85rem; color:#5D9C59; font-weight:600;">點擊前往 Design &rarr;</p>
+        </a>
+        <a href="design.html#interior-design" class="card"
+          style="text-decoration:none; color:inherit; display:flex; flex-direction:column; transition: transform 0.3s;"
+          onmouseover="this.style.transform='translateY(-5px)';" onmouseout="this.style.transform='translateY(0)';">
+          <div class="tag">Stage 3</div>
+          <h4>使用後：回收再製</h4>
+          <p class="mt-large" style="margin-top:1rem; flex:1;">透過循環織室空間，回收舊衣並拆解重製成新產品RE-Clothes Shoes。</p>
+          <p style="margin-top:1rem; font-size:0.85rem; color:#5D9C59; font-weight:600;">點擊前往 Design &rarr;</p>
+        </a>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="digital-system fade-in-up" style="margin-bottom: 5vh;">
+      <h3 class="text-center text-secondary mb-large">Video</h3>
+      <div class="video-wrapper" style="display:flex; gap:2rem; justify-content:space-between; flex-wrap:wrap;">
+        <div class="video-item" style="flex:1; min-width:280px;">
+          <h4 class="text-primary" style="margin-bottom:0.75rem;">品牌介紹影片</h4>
+          <div
+            style="position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+            <iframe src="https://www.youtube.com/embed/TyS_bqZLm9Q" title="24% Twenty-Four Percent 介紹影片" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+        </div>
+        <div class="video-item" style="flex:1; min-width:280px;">
+          <h4 class="text-primary" style="margin-bottom:0.75rem;">24% Twenty‑Four Percent APP</h4>
+          <div
+            style="position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; box-shadow:0 8px 24px rgba(0,0,0,0.1);">
+            <iframe src="https://www.youtube.com/embed/YotY8QzMi1w" title="24% Twenty-Four Percent APP" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer
+    style="text-align:center; padding: 2rem; border-top: 1px solid rgba(0,0,0,0.05); color: #888; margin-top: 5vh;">
+    <p style="margin:0; font-size: 0.9rem;">&copy; 2026 24% Twenty-Four Percent. All rights reserved.</p>
+  </footer>
+
+  <script src="./main.js" defer></script>
+</body>
+
+</html>
