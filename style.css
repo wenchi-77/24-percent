@@ -292,10 +292,45 @@ section {
     gap: 2rem;
   }
 
-  .nav-links {
-    display: none;
-    /* simple mobile nav hide for now */
+  .mobile-menu-btn {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--color-secondary);
+    user-select: none;
+    z-index: 1001;
   }
+
+  .nav-links {
+    position: fixed;
+    top: var(--nav-height);
+    left: 0;
+    width: 100%;
+    background-color: rgba(249, 248, 246, 0.98);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    flex-direction: column;
+    padding: 2rem;
+    gap: 1.5rem;
+    align-items: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    display: flex;
+    z-index: 999;
+  }
+
+  .nav-links.mobile-open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu-btn {
+  display: none;
 }
 
 /* ── Clickable Card ── */

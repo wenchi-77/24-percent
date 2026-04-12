@@ -56,6 +56,14 @@ const setupCarouselAutoPlay = () => {
 document.addEventListener('DOMContentLoaded', () => {
   setupAnimations();
   setupCarouselAutoPlay();
+
+  // Mobile Menu Toggle
+  const mobileBtn = document.querySelector('.mobile-menu-btn');
+  if (mobileBtn) {
+    mobileBtn.addEventListener('click', () => {
+      document.querySelector('.nav-links').classList.toggle('mobile-open');
+    });
+  }
 });
 
 // ── Modal Controls ──
