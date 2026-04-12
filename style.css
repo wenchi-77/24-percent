@@ -495,3 +495,74 @@ section {
     font-size: 1.35rem;
   }
 }
+
+/* ── Interactive Flip Cards ── */
+.flip-card {
+  perspective: 1200px;
+  margin-top: 2rem;
+}
+
+.flip-card-inner {
+  display: grid;
+  transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  grid-area: 1 / 1;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flip-card-front {
+  background: var(--color-bg);
+  border: 2px dashed rgba(139, 168, 136, 0.5);
+  align-items: center;
+  text-align: center;
+}
+
+.flip-card-front h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.flip-card-front .hint-text {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+.flip-card-back {
+  background: var(--color-secondary);
+  color: var(--color-white);
+  transform: rotateY(180deg);
+  border: none;
+}
+
+.flip-card-back h5 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 0.5rem;
+}
+
+.flip-card-back p {
+  color: #fff;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin: 0;
+}
