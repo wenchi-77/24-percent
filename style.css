@@ -278,6 +278,10 @@ section {
   color: var(--color-secondary);
 }
 
+.mobile-menu-btn {
+  display: none;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .grid-2 {
@@ -327,10 +331,6 @@ section {
     visibility: visible;
     transform: translateY(0);
   }
-}
-
-.mobile-menu-btn {
-  display: none;
 }
 
 /* ── Clickable Card ── */
