@@ -59,14 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // ── Modal Controls ──
-function openModal(id) {
+window.openModal = function(id) {
   const modal = document.getElementById(id);
   if (!modal) return;
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
 
-function closeModal(id) {
+window.closeModal = function(id) {
   const modal = document.getElementById(id);
   if (!modal) return;
   modal.classList.remove('active');
